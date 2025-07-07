@@ -1,0 +1,10 @@
+realsense2_camera:
+  ros__parameters:
+    initial_reset: true
+    enable_gyro: true
+    enable_accel: true
+    unite_imu_method: 2
+    enable_sync: true
+    align_depth.enable: true
+    publish_tf: true
+    rgb_camera.color_profile: "848,480,60"
