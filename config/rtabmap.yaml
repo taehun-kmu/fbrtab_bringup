@@ -1,0 +1,12 @@
+rtabmap:
+  ros__parameters:
+    Rtabmap/StartMapOnLoopClosure: true
+    Odom/Strategy: 1
+    Odom/FeatureType: 6
+    Odom/MinInliers: 15
+    GFTT/MinDistance: 7
+    RGBD/ProximityBySpace: true
+    RGBD/ProximityPathMaxNeighbors: 10
+    RGBD/LoopClosureReextractFeatures: true
+    Vis/MinInliers: 15
+    Grid/RangeMax: 4.0
