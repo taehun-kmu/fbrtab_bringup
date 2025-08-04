@@ -5,18 +5,26 @@ from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 
+
 def generate_launch_description():
     fbrtab_bringup_pkg = get_package_share_directory('fbrtab_bringup')
 
     # Realsense
-    realsense_config = os.path.join(fbrtab_bringup_pkg, 'config', 'realsense.yaml')
     realsense_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(get_package_share_directory('realsense2_camera'), 'launch', 'rs_launch.py')
         ),
         launch_arguments={
-            'config_file': realsense_config
-        }.items()
+            "initial_reset": "true",
+            "enable_gyro": "true",
+            "enable_accel": "true",
+            "unite_imu_method": "2",
+            "enable_sync": "true",
+            "align_depth.enable": "true",
+            "rgb_camera.color_profile": "848,480,60",
+            "depth_module.profile": "848,480,60",
+            "publish_tf": "true",
+        }.items(),
     )
 
     # IMU Filter
