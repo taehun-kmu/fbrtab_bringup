@@ -1,10 +1,21 @@
-realsense2_camera:
-  ros__parameters:
-    initial_reset: true
-    enable_gyro: true
-    enable_accel: true
-    unite_imu_method: 2
-    enable_sync: true
-    align_depth.enable: true
-    publish_tf: true
-    rgb_camera.color_profile: "848,480,60"
+enable_sync: true
+enable_rgbd: true
+publish_tf: true
+unite_imu_method: 2
+
+enable_color: true
+rgb_camera.frames_queue_size: 4
+rgb_camera.color_profile: "848,480,60"
+
+enable_depth: true
+depth_module.frames_queue_size: 4
+depth_module.depth_profile: "848,480,60"
+
+align_depth.enable: true
+align_depth.frames_queue_size: 4
+
+enable_gyro: true
+gyro_fps: 400
+
+enable_accel: true
+accel_fps: 400
