@@ -48,7 +48,7 @@ def generate_launch_description():
         executable='static_transform_publisher',
         name='base_to_camera_tf',
         arguments=[
-            '0.08',  # x offset (8 cm forward)
+            '0.02',  # x offset (2 cm forward)
             '0.0',   # y offset
             '0.0',   # z offset
             '0.0',   # roll
